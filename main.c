@@ -25,7 +25,7 @@ int min_steps(int x, int y) {
         if (current_position + (step_size + 1) <= y) {
             step_size++;
         } else if (current_position + step_size <= y) {
-            // do nothing, continue with the same step_size
+            
         } else {
             step_size--;
         }
