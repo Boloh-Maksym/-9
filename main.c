@@ -6,11 +6,11 @@ int min_steps(int x, int y) {
     if (distance == 0) {
         return 0;
     }
-
+    
     int steps = 0;
     int current_position = x;
     int step_size = 1;
-
+    
     while (current_position < y) {
         if (current_position + step_size <= y) {
             current_position += step_size;
@@ -25,25 +25,25 @@ int min_steps(int x, int y) {
         if (current_position + (step_size + 1) <= y) {
             step_size++;
         } else if (current_position + step_size <= y) {
-
+            // do nothing, continue with the same step_size
         } else {
             step_size--;
         }
     }
-
+    
     return steps;
 }
 
 int main() {
     int x, y;
-    printf("Ââåä³òü x: ");
+    printf("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x: ");
     scanf("%d", &x);
-    printf("Ââåä³òü y: ");
+    printf("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y: ");
     scanf("%d", &y);
-
+    
     int result = min_steps(x, y);
-    printf("Ì³í³ìàëüíà ê³ëüê³ñòü êðîê³â: %d\n", result);
-
+    printf("ÐœÑ–Ð½Ñ–Ð¼Ð°Ð»ÑŒÐ½Ð° ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ ÐºÑ€Ð¾ÐºÑ–Ð²: %d\n", result);
+    
     return 0;
 }
 
